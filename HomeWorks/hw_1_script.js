@@ -19,3 +19,5 @@ var str = 'Your Name and Surname: '+name+'\n'+'Your gender: '+gender+'\n'+'Your 
 var result = confirm(str);
     
 }while(!result);
+
+alert("Thanks for your response");
