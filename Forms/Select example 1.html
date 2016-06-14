@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+    <head>
+        <style type="text/css">
+            html,body
+            {
+                border: 1px solid red;
+                width:100%;
+                height: 100%;
+                margin: 0px;
+                padding: 0px;
+            }
+            div.cl_d1
+            {
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                width:200px;
+                height: 200px;
+                border:1px solid blue; 
+            }
+            div.cl_d2
+            {
+                position: absolute;
+                left: 40px;
+                top: 40px;
+                width:120px;
+                height: 120px;
+                border:1px solid #CC00CC; 
+            }
+            div.cl_d3
+            {
+                position: absolute;
+                left: 40px;
+                top: 40px;
+                width:40px;
+                height: 40px;
+                border:1px solid green; 
+            }
+			
+			fieldset{
+				width: 200px;
+			}
+			select{
+				width:200px;
+			}
+        </style>
+
+    </head>
+    <body>
+<!--onmousemove ="MouseMove(event)"  onmouseup="MouseUp(event)"-->
+
+        <form name="form1">
+			<select size="5"  multiple style="float:left">
+			  <option value="volvo">Volvo</option>
+			  <option value="saab">Saab</option>
+			  <option value="mercedes">Mercedes</option>
+			  <option value="audi">Audi</option>
+			</select>
+			<div style="float:left; padding-top:15px;">
+			<input type="button" value="<<" id="push_left"><br>
+			<input type="button" value=">>" id="push_right">
+			</div>
+			<select size="5"  multiple>
+			  <option value="st1">One star</option>
+			  <option value="st2">**</option>
+			  <option value="st3">***</option>
+			  <option value="st4">****</option>
+			</select>
+			
+		</form>
+        <script type="text/javascript">
+			var push_left = document.getElementById("push_left");
+			var push_right = document.getElementById("push_right");
+		    
+			push_left.addEventListener("click", moveLeft, false);
+			push_right.addEventListener("click", moveRight, false);
+			
+			function moveLeft(){
+				var my_form = document.forms[0];
+				var opt = my_form.elements[3].options;
+				var dest_select = my_form.elements[0];
+				for(var i = 0; i < opt.length; i++){
+					if(opt[i].selected)
+						dest_select.add(opt[i].cloneNode(true));
+				}
+				for(var i = opt.length - 1; i >= 0; i--){
+					if(opt[i].selected)
+						my_form.elements[3].remove(i);
+				}
+			}
+			
+			
+			function moveRight(){
+				var my_form = document.forms[0];
+				var opt = my_form.elements[0].options;
+				var dest_select = my_form.elements[3];
+				for(var i = 0; i < opt.length; i++){
+					if(opt[i].selected)
+						dest_select.add(opt[i].cloneNode(true));
+				}
+				for(var i = opt.length - 1; i >=0 ; i--){
+					if(opt[i].selected)
+						my_form.elements[0].remove(i);
+				}
+			}
+			
+        </script>
+    </body>
+</html>

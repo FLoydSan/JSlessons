@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+    <head>
+        <style type="text/css">
+            html,body
+            {
+                border: 1px solid red;
+                width:100%;
+                height: 100%;
+                margin: 0px;
+                padding: 0px;
+            }
+            div.cl_d1
+            {
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                width:200px;
+                height: 200px;
+                border:1px solid blue; 
+            }
+            div.cl_d2
+            {
+                position: absolute;
+                left: 40px;
+                top: 40px;
+                width:120px;
+                height: 120px;
+                border:1px solid #CC00CC; 
+            }
+            div.cl_d3
+            {
+                position: absolute;
+                left: 40px;
+                top: 40px;
+                width:40px;
+                height: 40px;
+                border:1px solid green; 
+            }
+        </style>
+
+    </head>
+    <body>
+<!--onmousemove ="MouseMove(event)"  onmouseup="MouseUp(event)"-->
+
+        <form name="form1">
+			First name: <input type="text" name="firstname"><br>
+			Last name: <input type="text" name="lastname">
+		</form>
+        
+
+        <script type="text/javascript">
+		
+		    
+			//alert(document.forms.length);
+			// доступ к формам
+			//alert(document.forms[0]);
+			//alert(document.forms["form1"]);
+			//alert(document.forms.form1);
+			// доступ к элементам
+			// кол-во элементов
+			alert(document.forms[0].length);
+			alert(document.forms[0].elements.length);
+			// input text
+			//document.forms[0].elements[0].defaultValue = "qwerty";
+			document.forms[0].elements[0].maxLength = 6;
+			
+			
+			
+        </script>
+    </body>
+</html>

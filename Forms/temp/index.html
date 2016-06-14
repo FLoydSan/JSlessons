@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<form name="myform">
+		<input name="text">
+	</form>
+
+<script>
+  var form = document.forms.myform;
+
+  alert( form.elements.text == form.text ); // true, это тот самый INPUT
+
+  form.text.name = "new-name"; // меняем name ему
+  form.text.setAttribute("new-name", "value");
+
+  // нет больше элемента с таким именем
+  alert( form.elements.text ); // undefined
+
+  alert( form.text ); //  INPUT (а должно быть undefined!)
+  alert( form.newName);
+</script>
+</body>
+</html>
