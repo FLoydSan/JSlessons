@@ -18,5 +18,5 @@ for (var i = 0; i < questions.length; i++) {
     else answers[i] = "No"
 }
 for (var i = 0; i < questions.length; i++) {
-    document.write("<b>" + questions[i] + "</b>" + " : " + answers[i] + "<br />")
+    document.write("<b>" + questions[i] + "</b> : " + answers[i] + "<br />")
 }
