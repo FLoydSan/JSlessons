@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Home Work 3 Photo Gallery</title>
+    <meta charset="utf-8"/>
+    <script type="text/javascript" src="script.js"></script>
+    <style type="text/css">
+        div {
+            position: absolute;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<body onmousemove="dragElement()">
+<img src="HW_4_img/1.jpg" width="15%" height="15%"
+     onmouseover="showTip(tip1)"
+     onmouseout="hideTip()"
+     onmousemove="captureCursor()"
+     onclick="document.body.style.backgroundImage = 'url(HW_4_img/1.jpg)';"/>
+
+<img src="HW_4_img/2.jpg" width="15%" height="15%"
+     onmouseover="showTip(tip2)"
+     onmouseout="hideTip()"
+     onmousemove="captureCursor()"
+     onclick="document.body.style.backgroundImage = 'url(HW_4_img/2.jpg)';"/>
+
+<img src="HW_4_img/3.jpg" width="15%" height="15%"
+     onmouseover="showTip(tip3)"
+     onmouseout="hideTip()"
+     onmousemove="captureCursor()"
+     onclick="document.body.style.backgroundImage = 'url(HW_4_img/3.jpg)';"/>
+
+<img src="HW_4_img/4.jpg" width="15%" height="15%"
+     onmouseover="showTip(tip4)"
+     onmouseout="hideTip()"
+     onmousemove="captureCursor()"
+     onclick="document.body.style.backgroundImage = 'url(HW_4_img/4.jpg)';"/>
+
+<img src="HW_4_img/5.jpg" width="15%" height="15%"
+     onmouseover="showTip(tip5)"
+     onmouseout="hideTip()"
+     onmousemove="captureCursor()"
+     onclick="document.body.style.backgroundImage = 'url(HW_4_img/5.jpg)';"/>
+
+<img src="HW_4_img/6.jpg" width="15%" height="15%"
+     onmouseover="showTip(tip6)"
+     onmouseout="hideTip()"
+     onmousemove="captureCursor()"
+     onclick="setBackgroud(tip6)"/>
+
+<div id="tip1"><h3>first image</h3><img src="HW_4_img/1.jpg" style="float:inherit;" width="40%" height="40%"/></div>
+<div id="tip2"><h3>second image</h3><img src="HW_4_img/2.jpg" style="float:inherit;" width="40%" height="40%"/></div>
+<div id="tip3"><h3>third image</h3><img src="HW_4_img/3.jpg" style="float:inherit;" width="40%" height="40%"/></div>
+<div id="tip4"><h3>fourth image</h3><img src="HW_4_img/4.jpg" style="float:inherit;" width="40%" height="40%"/></div>
+<div id="tip5"><h3>fifth image</h3><img src="HW_4_img/5.jpg" style="float:inherit;" width="40%" height="40%"/></div>
+<div id="tip6"><h3>sixth image</h3><img src="HW_4_img/6.jpg" style="float:inherit;" width="40%" height="40%"/></div>
+</body>
+</html>
