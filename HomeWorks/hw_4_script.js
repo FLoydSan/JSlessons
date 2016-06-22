@@ -1,5 +1,6 @@
 /**
- * Created by Aleksandr on 6/21/2016.
+ * На странице должны быть расположены несколько фото-миниатюр. При наведении мыши на миниатюру, рядом с ней появляется всплывающий блок, где это фото видно в увеличенном виде.
+ * При клике на миниатюру, выбранное фото становится фоном всей страницы..
  */
 var tip = document.getElementsByTagName('img'), mouseX, mouseY;
 
@@ -23,8 +24,4 @@ function displayTip() {
 
 function hideTip() {
     tip.style.display = "none";
-}
-
-function setBackgroud(tipObject) {
-    document.body.style.backgroundImage = "url(" + tip + ")";
 }
