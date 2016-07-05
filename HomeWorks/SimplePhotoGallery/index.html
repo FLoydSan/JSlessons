@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Photo Gallery</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+</head>
+<body>
+<div class="center">
+    <img name="picture" src="./img/1.jpg"><br />
+    <a onclick="return prevImage()" href="#">Preview Image</a>
+    <a onclick="return nextImage()" href="#">Next Image</a>
+</div>
+
+<script type="text/javascript">
+var currentImage = 0, count = 0;
+var path = new Array("./img/1.jpg", "./img/2.jpg", "./img/3.jpg", "./img/4.jpg", "./img/5.jpg", "./img/6.jpg", "./img/7.jpg", "./img/8.jpg", "./img/9.jpg", "./img/10.jpg");
+var img = new Array ();
+
+for (var i=0; i < path.length; i++) {
+    img[i] = new Image (320, 240);
+    img[i].src = path[i];
+    img[i].onload = countImages;
+}
+
+function countImages () {
+    count++;
+    if (count == path.length)
+        info.innerText = "Done!";
+    else
+        info.innerText = "Loading images: " + count + " из " + path.length;
+
+}
+//tbd
+function unCountImages () {
+    count++;
+    if (count == path.length)
+        info.innerText = "Done!";
+    else
+        info.innerText = "Loading images: " + count + " из " + path.length;
+
+}//tbd
+function nextImage() {
+    if (count != path.length) {
+        alert ("Дождитесь пожалуйста загрузки всех изображений!");
+        return;
+    }
+    currentImage++;
+    if (currentImage == path.length)
+        currentImage = 0;
+    document.images["picture"].src = img[currentImage].src;
+    return false;
+}
+//tbd with uncount images
+function prevImage() {
+    if (count != path.length) {
+        alert ("Дождитесь пожалуйста загрузки всех изображений!");
+        return;
+    }
+    currentImage--;
+    if (currentImage == path.length)
+        currentImage = 0;
+    document.images["picture"].src = img[currentImage].src;
+    return false;
+}//tbd with uncount images
+</script>
+
+</body>
+</html>
